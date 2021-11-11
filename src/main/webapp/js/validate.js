@@ -1,28 +1,39 @@
 // Поиск значения
-// $('.hidden_x').val('')
-//
-// afterAjaxSuccess = function (data) {
-//     if(data == "success") checkClick();
-// }
-//
-// checkClick = function () {
-//     $('#svg_area').on('click', function (e) {
-//         let scope = $('select').val();
-//         let x_coord = ((e.pageX - $(this).offset().left - 150) / 99.5) * scope;
-//         let y_coord = (-(e.pageY - $(this).offset().top - 150) / 99.5) * scope;
-//
-//         if (clickValidate(x_coord, y_coord, scope)) {
-//             $('.hidden_x').val(x_coord.toFixed(2))
-//             $('#parent_y').children('input').val(y_coord.toFixed(2))
-//             $('#submit').children('input').click()
-//         } else {
-//             if (!clickX(x_coord)) set_and_remove_error_X("Значение выходит за границы диапазона")
-//             if (!clickY(y_coord)) set_and_remove_error_Y("Значение выходит за границы диапазона")
-//         }
-//     })
-// }
-//
-// checkClick();
+
+afterAjaxSuccess = function (data) {
+    if (data.status == "success") {
+        checkClick();
+        console.log("success");
+    }
+}
+
+checkClick = function () {
+
+
+    $('#svg_area').on('click', function (e) {
+        let scope = $('select').val();
+        let x_coord = ((e.pageX - $(this).offset().left - 150) / 99.5) * scope;
+        let y_coord = (-(e.pageY - $(this).offset().top - 150) / 99.5) * scope;
+
+        if (clickValidate(x_coord, y_coord, scope)) {
+            console.log("do_this")
+            $('.hidden_x').val(x_coord.toFixed(2))
+            $('#parent_y').children('input').val(y_coord.toFixed(2))
+            $('#submit').children('input').click()
+        } else {
+            if (!clickX(x_coord)) set_and_remove_error_X("Значение выходит за границы диапазона")
+            if (!clickY(y_coord)) set_and_remove_error_Y("Значение выходит за границы диапазона")
+        }
+    })
+}
+
+checkClick();
+
+function putValueX() {
+    let radios = document.querySelector("input[type=radio]:checked").value;
+    $('#parent_x').children('.hidden_x').val(radios);
+    console.log(radios);
+}
 
 function clickValidate(x, y, r) {
     return !!(clickX(x) && clickY(y) && clickR(r));
@@ -50,13 +61,15 @@ function validate() {
     set_and_remove_error_Y(y_coordinate);
     set_and_remove_error_R(r_coordinate);
 
+    console.log("Zal")
     return !isNaN(x_coordinate) && !isNaN(y_coordinate) && !isNaN(r_coordinate);
+
 }
 
 function check_and_return_X() {
-    let x_coordinate = $('#parent_x').find('input[checked=checked]').val();
-    if (!isNaN(x_coordinate)) {
-        if (x_coordinate >= -3 && x_coordinate <= 5) return x_coordinate
+    let x_coordinate_h = $('#parent_x').find('input.hidden_x').val();
+    if (!isNaN(x_coordinate_h)) {
+        if (x_coordinate_h >= -3 && x_coordinate_h <= 5) return x_coordinate_h
         else return "Введите число в правильном диапазоне"
     } else return "Введите число"
 
@@ -71,9 +84,9 @@ function check_and_return_Y() {
             parseFloat(y_coordinate);
         }
     }
-
     if (!isNaN(y_coordinate) && !y_coordinate == '') {
         if (y_coordinate != '-0') {
+
             if (y_coordinate > -5 && y_coordinate < 3) {
                 return y_coordinate
             } else {
@@ -101,24 +114,25 @@ function check_and_return_R() {
 
 function set_and_remove_error_X(x_coordinate) {
     if (!isNaN(x_coordinate)) {
-        document.getElementsByClassName('x_error_mes').innerHTML = '';
+        $('#parent_x .x_error_mes').html("");
     } else {
-        document.getElementsByClassName('x_error_mes').innerHTML = x_coordinate;
+        $('#parent_x .x_error_mes').html(x_coordinate);
     }
 }
 
 function set_and_remove_error_Y(y_coordinate) {
+
     if (!isNaN(y_coordinate)) {
-        document.getElementsByClassName('y_error_mes').innerHTML = '';
+        $('#parent_y .y_error_mes').html("");
     } else {
-        document.getElementsByClassName('y_error_mes').innerHTML = y_coordinate;
+        $('#parent_y .y_error_mes').html(y_coordinate);
     }
 }
 
 function set_and_remove_error_R(r_coordinate) {
     if (!isNaN(r_coordinate)) {
-        document.getElementsByClassName('r_error_mes').innerHTML = '';
+        $('#parent_r .r_error_mes').html("");
     } else {
-        document.getElementsByClassName('r_error_mes').innerHTML = r_coordinate;
+        $('#parent_r .r_error_mes').html(r_coordinate);
     }
 }

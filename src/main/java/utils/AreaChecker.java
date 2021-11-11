@@ -15,7 +15,7 @@ public class AreaChecker {
     }
 
     private static boolean checkTriangle(double x, double y, double r) {
-        if (x <= 0 && x >= r / 2  &&
+        if (x <= 0 && x >= -r / 2  &&
                 y <= 0 && y >= -r) {
             return y >= -2 * x - r;
         }

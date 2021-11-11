@@ -13,74 +13,82 @@
 <f:view>
     <h:body styleClass="body_main">
         <div class="coordinates_picture">
-            <svg id="svg_area" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" xmlns:ui="http://java.sun.com/jsf/facelets">
-                <rect x="150" y="150" width="100" height="50" style="stroke-opacity: 0.6; fill: rgb(51, 153, 255);"/>
-                <rect x="761.101" y="270.492" width="0.74" height="0.74"
-                      style="fill: rgb(216, 216, 216); fill-opacity: 0.6;"/>
-                <path style="fill: rgb(51, 153, 255);"
-                      transform="matrix(0.798786, 0, 0, 0.798786, -104.972481, 27.785759)"
-                      d="M 256.605 153 A 62.595 62.595 0 0 1 319.2 90.405 L 319.2 153 Z"
-                      />
-                <path d="M 75.398 9.732 L 175.398 59.732 L 75.398 59.732 L 75.398 9.732 Z"
-                      style="fill: rgb(51, 153, 255);" transform="matrix(0.000001, 1, 1, -0.000001, 90.26792, 74.60206)"
-                      />
-                <line style="stroke: rgb(0, 0, 0);" x1="25" y1="149.5" x2="275" y2="150.5" />
-                <line style="stroke: rgb(0, 0, 0);" x1="150" y1="25" x2="150" y2="275"
-                      transform="matrix(-1, 0, 0, -1, 300, 300)"/>
-                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.225px; font-weight: 700; white-space: pre;"
-                      transform="matrix(0.321932, 0, 0, 0.416125, 213.714233, 121.107925)" x="106.508" y="57.716">R
-                </text>
-                <line style="stroke: rgb(0, 0, 0);" x1="50" y1="148" x2="50" y2="152"/>
-                <line style="stroke: rgb(0, 0, 0);" x1="100" y1="148" x2="100" y2="152"/>
-                <line style="stroke: rgb(0, 0, 0);" x1="200" y1="148" x2="200" y2="152"/>
-                <line style="stroke: rgb(0, 0, 0);" x1="250" y1="148" x2="250" y2="152"/>
-                <line style="stroke: rgb(0, 0, 0);" x1="150" y1="48" x2="150" y2="52"
-                      transform="matrix(0, 1, -1, 0, 200, -100)"/>
-                <line style="stroke: rgb(0, 0, 0);" x1="150" y1="248" x2="150" y2="252"
-                      transform="matrix(0, 1, -1, 0, 400, 100)"/>
-                <line style="stroke: rgb(0, 0, 0);" x1="150" y1="98" x2="150" y2="102"
-                      transform="matrix(0, 1, -1, 0, 250, -50)"/>
-                <line style="stroke: rgb(0, 0, 0);" x1="150" y1="198" x2="150" y2="202"
-                      transform="matrix(0, 1, -1, 0, 350, 50)"/>
-                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.225px; font-weight: 700; white-space: pre;"
-                      transform="matrix(0.321932, 0, 0, 0.416125, 120.714241, 78.107925)" x="106.508" y="57.716">R/2
-                </text>
-                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.225px; font-weight: 700; white-space: pre;"
-                      transform="matrix(0.321932, 0, 0, 0.416125, 120.714241, 29.036404)" x="106.508" y="57.716">R
-                </text>
-                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.225px; font-weight: 700; white-space: pre;"
-                      transform="matrix(0.321932, 0, 0, 0.416125, 120.714233, 228.107925)" x="106.508" y="57.716">-R
-                </text>
-                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.225px; font-weight: 700; white-space: pre;"
-                      transform="matrix(0.321932, 0, 0, 0.416125, 11.71424, 121.107925)" x="106.508" y="57.716">-R
-                </text>
-                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.225px; font-weight: 700; white-space: pre;"
-                      transform="matrix(0.321932, 0, 0, 0.416125, 120.714241, 178.107925)" x="106.508" y="57.716">-R/2
-                </text>
-                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.225px; font-weight: 700; white-space: pre;"
-                      transform="matrix(0.321932, 0, 0, 0.416125, 58.714241, 121.107925)" x="106.508" y="57.716">-R/2
-                </text>
-                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.225px; font-weight: 700; white-space: pre;"
-                      transform="matrix(0.321932, 0, 0, 0.416125, 158.714233, 121.107925)" x="106.508" y="57.716">-R/2
-                </text>
-                <path d="M 90.071 58.82 L 91.571 62.82 L 88.571 62.82 L 90.071 58.82 Z" style=""
-                      transform="matrix(1, -0.000004, 0.000004, 1, 59.928764, -36.820053)"
-                      />
-                <path d="M 122.788 31.44 L 124.288 35.44 L 121.288 35.44 L 122.788 31.44 Z" style=""
-                      transform="matrix(0.000077, -1, -1, -0.000077, 310.430658, 273.290742)"
-                      />
-                <g>
-                    <ui:repeat value="#{manager.allResults}" var="point">
-                        <circle r="3" cx="#{point.XSvg}" cy="#{point.YSvg}" fill="#{point.chooseColor}"></circle>
-                    </ui:repeat>
-                </g>
-            </svg>
+            <f:view id="area">
+                <svg id="svg_area" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:ui="http://java.sun.com/jsf/facelets">
+                    <rect x="150" y="150" width="100" height="50"
+                          style="stroke-opacity: 0.6; fill: rgb(51, 153, 255);"/>
+                    <rect x="761.101" y="270.492" width="0.74" height="0.74"
+                          style="fill: rgb(216, 216, 216); fill-opacity: 0.6;"/>
+                    <path style="fill: rgb(51, 153, 255);"
+                          transform="matrix(0.798786, 0, 0, 0.798786, -104.972481, 27.785759)"
+                          d="M 256.605 153 A 62.595 62.595 0 0 1 319.2 90.405 L 319.2 153 Z"
+                    />
+                    <path d="M 75.398 9.732 L 175.398 59.732 L 75.398 59.732 L 75.398 9.732 Z"
+                          style="fill: rgb(51, 153, 255);"
+                          transform="matrix(0.000001, 1, 1, -0.000001, 90.26792, 74.60206)"
+                    />
+                    <line style="stroke: rgb(0, 0, 0);" x1="25" y1="149.5" x2="275" y2="150.5"/>
+                    <line style="stroke: rgb(0, 0, 0);" x1="150" y1="25" x2="150" y2="275"
+                          transform="matrix(-1, 0, 0, -1, 300, 300)"/>
+                    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.225px; font-weight: 700; white-space: pre;"
+                          transform="matrix(0.321932, 0, 0, 0.416125, 213.714233, 121.107925)" x="106.508" y="57.716">R
+                    </text>
+                    <line style="stroke: rgb(0, 0, 0);" x1="50" y1="148" x2="50" y2="152"/>
+                    <line style="stroke: rgb(0, 0, 0);" x1="100" y1="148" x2="100" y2="152"/>
+                    <line style="stroke: rgb(0, 0, 0);" x1="200" y1="148" x2="200" y2="152"/>
+                    <line style="stroke: rgb(0, 0, 0);" x1="250" y1="148" x2="250" y2="152"/>
+                    <line style="stroke: rgb(0, 0, 0);" x1="150" y1="48" x2="150" y2="52"
+                          transform="matrix(0, 1, -1, 0, 200, -100)"/>
+                    <line style="stroke: rgb(0, 0, 0);" x1="150" y1="248" x2="150" y2="252"
+                          transform="matrix(0, 1, -1, 0, 400, 100)"/>
+                    <line style="stroke: rgb(0, 0, 0);" x1="150" y1="98" x2="150" y2="102"
+                          transform="matrix(0, 1, -1, 0, 250, -50)"/>
+                    <line style="stroke: rgb(0, 0, 0);" x1="150" y1="198" x2="150" y2="202"
+                          transform="matrix(0, 1, -1, 0, 350, 50)"/>
+                    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.225px; font-weight: 700; white-space: pre;"
+                          transform="matrix(0.321932, 0, 0, 0.416125, 120.714241, 78.107925)" x="106.508" y="57.716">R/2
+                    </text>
+                    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.225px; font-weight: 700; white-space: pre;"
+                          transform="matrix(0.321932, 0, 0, 0.416125, 120.714241, 29.036404)" x="106.508" y="57.716">R
+                    </text>
+                    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.225px; font-weight: 700; white-space: pre;"
+                          transform="matrix(0.321932, 0, 0, 0.416125, 120.714233, 228.107925)" x="106.508" y="57.716">-R
+                    </text>
+                    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.225px; font-weight: 700; white-space: pre;"
+                          transform="matrix(0.321932, 0, 0, 0.416125, 11.71424, 121.107925)" x="106.508" y="57.716">-R
+                    </text>
+                    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.225px; font-weight: 700; white-space: pre;"
+                          transform="matrix(0.321932, 0, 0, 0.416125, 120.714241, 178.107925)" x="106.508"
+                          y="57.716">-R/2
+                    </text>
+                    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.225px; font-weight: 700; white-space: pre;"
+                          transform="matrix(0.321932, 0, 0, 0.416125, 58.714241, 121.107925)" x="106.508"
+                          y="57.716">-R/2
+                    </text>
+                    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19.225px; font-weight: 700; white-space: pre;"
+                          transform="matrix(0.321932, 0, 0, 0.416125, 158.714233, 121.107925)" x="106.508"
+                          y="57.716">-R/2
+                    </text>
+                    <path d="M 90.071 58.82 L 91.571 62.82 L 88.571 62.82 L 90.071 58.82 Z" style=""
+                          transform="matrix(1, -0.000004, 0.000004, 1, 59.928764, -36.820053)"
+                    />
+                    <path d="M 122.788 31.44 L 124.288 35.44 L 121.288 35.44 L 122.788 31.44 Z" style=""
+                          transform="matrix(0.000077, -1, -1, -0.000077, 310.430658, 273.290742)"
+                    />
+                    <g>
+                        <ui:repeat id="area" value="#{manager.allResults}" var="point">
+                            <circle r="3" cx="#{point.XSvg}" cy="#{point.YSvg}" fill="#{point.chooseColor}"></circle>
+                        </ui:repeat>
+                    </g>
+                </svg>
+            </f:view>
         </div>
         <h:form styleClass="form_with_coordinates" id="form_with_coordinates">
             <div id="parent_x">
                 <div class="coordinate_name"><span>Введите X:</span></div>
-                <h:selectOneRadio id="x" value="#{manager.x}">
-                    <f:selectItem itemValue="-3" itemLabel="-3" p:selected="true"/>
+                <h:selectOneRadio id="x" value="#{manager.x}" onchange="putValueX()">
+                    <f:selectItem itemValue="-3" itemLabel="-3"/>
                     <f:selectItem itemValue="-2" itemLabel="-2"/>
                     <f:selectItem itemValue="-1" itemLabel="-1"/>
                     <f:selectItem itemValue="0" itemLabel="0"/>
@@ -92,6 +100,7 @@
                     <f:validateDoubleRange minimum="-3.0" maximum="5.0"/>
                 </h:selectOneRadio>
                 <p:message for="x" styleClass="error_message x_error_mes"/>
+                <h:inputText value="#{manager.x}" styleClass="hidden_x"/>
             </div>
             <div id="parent_y">
                 <div class="coordinate_name"><span>Введите Y:</span></div>
@@ -115,20 +124,20 @@
             <div id="submit">
                 <h:commandButton styleClass="submit" value="Проверить точку" action="#{manager.toAction}"
                                  onclick="return validate()">
-                    <f:ajax execute="@form" render="@all"/>
+                    <f:ajax execute="@form" onevent="afterAjaxSuccess" render="@all"/>
                 </h:commandButton>
                 <div class="extra_buttons">
                     <h:commandButton immediate="true" styleClass="submit" value="Вернуться"
                                      action="#{navigator.toStart}"/>
                     <h:commandButton styleClass="submit" value="Очистить" action="#{manager.clearTable}">
-                        <f:ajax execute="@form" render="@all"/>
+                        <f:ajax execute="@form" onevent="afterAjaxSuccess" render="@all"/>
                     </h:commandButton>
                 </div>
             </div>
         </h:form>
         <h2 class="last_h2">Прошлые запросы</h2>
         <div id="lastResultsTable" class="past_results">
-            <h:dataTable value="#{manager.allResults}" var="res">
+            <h:dataTable id="answerArea" value="#{manager.allResults}" var="res">
                 <h:column>
                     <f:facet name="header">X</f:facet>
                     <div>
