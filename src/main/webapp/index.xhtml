@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Главная</title>
+    <link rel="stylesheet" href="fonts/GothamPro/stylesheet.css" type="text/css"/>
+    <link rel="stylesheet" href="css/index.css" type="text/css"/>
+</h:head>
+<h:body>
+    <div class="header">
+        <h1 class="student_name">Мокров Семён Андреевич P3215</h1>
+        <h1 class="lab_option">Вариант №549051</h1>
+    </div>
+    <div class="main_part">
+        <h:form id="to_main">
+            <h:commandButton id="button_to_main" styleClass="start_button" value="Перейти на главную страницу" action="#{navigator.toMain}"/>
+        </h:form>
+        <p:outputPanel id="date_timer" styleClass="timer">Текущая дата: <span>#{timer.date}</span></p:outputPanel>
+        <p:outputPanel id="time_timer" styleClass="timer">Текущее время: <span>#{timer.time}</span></p:outputPanel>
+        <p:poll interval="11" update="date_timer time_timer"/>
+    </div>
+</h:body>
+</html>
