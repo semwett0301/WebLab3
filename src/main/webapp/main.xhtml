@@ -97,7 +97,7 @@
                     <f:selectItem itemValue="3" itemLabel="3"/>
                     <f:selectItem itemValue="4" itemLabel="4"/>
                     <f:selectItem itemValue="5" itemLabel="5"/>
-                    <f:validateDoubleRange minimum="-3.0" maximum="5.0"/>
+                    <f:validateDoubleRange/>
                 </h:selectOneRadio>
                 <p:message for="x" styleClass="error_message x_error_mes"/>
                 <h:inputText value="#{manager.x}" styleClass="hidden_x"/>
@@ -105,7 +105,7 @@
             <div id="parent_y">
                 <div class="coordinate_name"><span>Введите Y:</span></div>
                 <p:inputText id="y" placeholder="(-5 ... 3)" value="#{manager.y}" styleClass="hidden_y">
-                    <f:validateDoubleRange minimum="-4.999999" maximum="2.999999"/>
+                    <f:validateDoubleRange/>
                 </p:inputText>
                 <p:message for="y" styleClass="error_message y_error_mes"/>
             </div>
@@ -117,7 +117,7 @@
                     <f:selectItem itemValue="3" itemLabel="3"/>
                     <f:selectItem itemValue="4" itemLabel="4"/>
                     <f:selectItem itemValue="5" itemLabel="5"/>
-                    <f:validateDoubleRange minimum="1.0" maximum="5.0"/>
+                    <f:validateDoubleRange/>
                 </h:selectOneMenu>
                 <p:message for="r" styleClass="error_message r_error_mes"/>
             </div>

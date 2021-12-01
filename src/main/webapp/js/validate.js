@@ -15,15 +15,15 @@ checkClick = function () {
         let x_coord = ((e.pageX - $(this).offset().left - 150) / 99.5) * scope;
         let y_coord = (-(e.pageY - $(this).offset().top - 150) / 99.5) * scope;
 
-        if (clickValidate(x_coord, y_coord, scope)) {
+        // if (clickValidate(x_coord, y_coord, scope)) {
             console.log("do_this")
             $('.hidden_x').val(x_coord.toFixed(2))
             $('#parent_y').children('input').val(y_coord.toFixed(2))
             $('#submit').children('input').click()
-        } else {
-            if (!clickX(x_coord)) set_and_remove_error_X("Значение выходит за границы диапазона")
-            if (!clickY(y_coord)) set_and_remove_error_Y("Значение выходит за границы диапазона")
-        }
+        // } else {
+        //     if (!clickX(x_coord)) set_and_remove_error_X("Значение выходит за границы диапазона")
+        //     if (!clickY(y_coord)) set_and_remove_error_Y("Значение выходит за границы диапазона")
+        // }
     })
 }
 
